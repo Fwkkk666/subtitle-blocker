@@ -19,6 +19,7 @@ dist/
 .idea/
 .DS_Store
 Thumbs.db
+.claude/
 
 # Local config
 *.json.bak
