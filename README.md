@@ -10,6 +10,17 @@ Who is this for? 看美剧/电影时想摆脱中文字幕、只留外语字幕�
 
 ---
 
+## 直接使用(不用装任何东西) / Download
+
+**[点这里去下载页(Releases)](https://github.com/Fwkkk666/subtitle-blocker/releases)**
+
+- **Windows**：下载 `SubtitleBlocker.exe`，双击即用。若系统提示“未知来源/已保护你的电脑”，点“更多信息”→“仍要运行”。
+- **macOS**：下载 `SubtitleBlocker-macOS.zip`，解压后右键打开。
+
+下载即可用，下面所有内容都是给开发者/进阶用户看的，普通用户不用读。
+
+---
+
 ## 这个工具是什么 / What it does
 
 - 一个**置顶的不透明彩色长条**，浮在所有窗口之上，盖住中文字幕行。
@@ -35,7 +46,9 @@ It is NOT an OCR tool. It is a simple manual overlay bar: drag it to cover the C
 
 ---
 
-## 安装与运行 / Run it
+## 进阶(开发者):源码运行与打包 / For developers
+
+普通用户请直接看上面的“直接使用”，不需要以下步骤。
 
 ### 从源码运行 (From source)
 
