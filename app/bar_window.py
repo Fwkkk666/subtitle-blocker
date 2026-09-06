@@ -132,16 +132,20 @@ class BarWindow(QWidget):
         p.setRenderHint(QPainter.RenderHint.Antialiasing)
 
         body = self.rect().adjusted(0, 0, -1, -1)
+        # Corner radius scales with height but stays modest (never a full pill).
+        radius = min(8, max(3, self.height() // 3))
         fill = QColor(self._color)
         fill.setAlpha(int(self._opacity * 255))
-        p.fillRect(body, fill)
+        p.setBrush(fill)
+        p.setPen(Qt.PenStyle.NoPen)
+        p.drawRoundedRect(body, radius, radius)
 
         if self._outline_t > 0.01:
             a = int(255 * self._outline_t)
             outline = QColor(ACCENT.red(), ACCENT.green(), ACCENT.blue(), a)
             p.setPen(QPen(outline, 2))
             p.setBrush(Qt.BrushStyle.NoBrush)
-            p.drawRect(body)
+            p.drawRoundedRect(body, radius, radius)
             p.setPen(Qt.PenStyle.NoPen)
             for _name, dx, dy in _HANDLE_POINTS:
                 cx = self.rect().center().x() + dx * (self.width() / 2 - 2)
